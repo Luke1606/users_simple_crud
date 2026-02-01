@@ -1,0 +1,4 @@
+crudApp/migrations/__pycache__/*
+crudApp/migrations/*.pyc
+crudApp/__pycache__/*
+CRUD/__pycache__/*
