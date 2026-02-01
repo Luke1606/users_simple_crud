@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+}
+
+input[type="text"], 
+input[type="email"],
+input[type="number"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #007bff; /* Azul claro */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+button {
+    background-color: #d70000; /* Azul claro */
+    color: #333; 
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Botón Cancelar: Hover effect */
+button:hover {
+    background-color: #ff0000; /* Gris más oscuro */
+}
+
+/* Enlace Cancelar */
+a {
+    color: #007bff; /* Azul claro */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'show.css' %}">
+{% endblock %}
+
+{% block title %}All{% endblock %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>CI</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Fecha Agregación</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            {% for persona in personas %}
+            <tr>
+                <td>{{ persona.ci }} </td>
+                <td>{{ persona.name }}</td>
+                <td>{{ persona.email }}</td>
+                <td>{{ persona.joined_date }}</td>
+                <td>
+                    <button class="normal"><a href="{% url 'save' persona.ci %}">Editar</a></button>
+                    <button class="warning"><a href="{% url 'delete' persona.ci %}">Eliminar</a></button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

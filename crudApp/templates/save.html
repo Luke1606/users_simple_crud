@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'save.css' %}">
+{% endblock %}
+
+{% block title %}Save{% endblock %}
+
+{% block content %}
+    <div class="mycard">
+        <h1>
+            {% if pk != '0' %}
+                Actualizar Persona    
+            {% else %}
+                Adicionar Persona
+            {% endif %}
+        </h1>
+
+        <form method="POST">{% csrf_token%}
+            {{ form }}
+
+            {% if error %}
+                <p style="color: red;">{{ error }}</p>
+            {% endif %}                
+            <button type="submit">Guardar</button>
+        </form>
+        <button><a href="/">Cancelar</a></button>
+    </div>
+{% endblock %}
